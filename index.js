@@ -3,8 +3,9 @@ const rp = require('request-promise')
 const fs = require('fs')
 
 const MAX_COUNT = 200
+const firstArticle = 'Computer'
 
-const start = async (url = 'https://en.wikipedia.org/wiki/Computer') => {
+const start = async (url = `https://en.wikipedia.org/wiki/${firstArticle}`) => {
   let visited = []
   let counter = 0
   let $ = await fetchCheerio(url)
