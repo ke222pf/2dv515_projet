@@ -78,7 +78,7 @@ const writeToFile = ($, url, links) => {
     if (err) {
       return console.log(err)
     }
-    // console.log('The file was saved!')
+    console.log(`Raw HTML saved to "./data/html/${url}.txt"`)
   })
 
   // WRITING TEXT TO FILE
@@ -86,7 +86,7 @@ const writeToFile = ($, url, links) => {
     if (err) {
       return console.log(err)
     }
-    // console.log('The file was saved!')
+    console.log(`Text saved to file "./data/words/${url}.txt"`)
   })
 
   // WRITING LINKS TO FILE
@@ -94,7 +94,7 @@ const writeToFile = ($, url, links) => {
   const pathName = writeStream.path
   links.forEach(value => writeStream.write(`${value}\n`))
   writeStream.on('finish', () => {
-    console.log(`wrote all the array data to file ${pathName}`)
+    console.log(`Links saved to file ${pathName}`)
   })
   writeStream.on('error', (err) => {
     console.error(`There is an error writing the file ${pathName} => ${err}`)
