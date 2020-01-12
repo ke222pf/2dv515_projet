@@ -1,0 +1,25 @@
+{
+  "name": "2dv515_projet",
+  "version": "1.0.0",
+  "description": "project 2dv515",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ke222pf/2dv515_projet.git"
+  },
+  "author": "karl David",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ke222pf/2dv515_projet/issues"
+  },
+  "homepage": "https://github.com/ke222pf/2dv515_projet#readme",
+  "dependencies": {
+    "cheerio": "^1.0.0-rc.3",
+    "request": "^2.88.0",
+    "request-promise": "^4.2.5"
+  }
+}
