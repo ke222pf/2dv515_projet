@@ -32,12 +32,15 @@ const start = async (url = `https://en.wikipedia.org/wiki/${firstArticle}`) => {
       if (!visited.includes(link)) {
         const newLinks = await scrapeIt(`https://en.wikipedia.org${link}`, link.replace('/wiki/', ''))
 
-        // Pushing wiki-links from page to linkList
-        newLinks.forEach(newLink => {
-          linkList.push(newLink)
-        })
-        counter++
-        visited.push(link)
+        // Only count and add links if scraped page is fecthed (200) and not empty
+        if (newLinks.length > 0) {
+          // Pushing wiki-links from page to linkList
+          newLinks.forEach(newLink => {
+            linkList.push(newLink)
+          })
+          counter++
+          visited.push(link)
+        }
       }
     } else {
       break
